@@ -10,10 +10,14 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.jws.WebService;
+
 /**
  *
  * @author User
  */
+
+@WebService
 public final class Gestor extends UnicastRemoteObject implements MensageiroInterface {
 
     private static MensageiroInterface instance = null;
@@ -21,7 +25,7 @@ public final class Gestor extends UnicastRemoteObject implements MensageiroInter
     private List<Conta> contas;
     private Object lock = new Object();
 
-    private Gestor() throws RemoteException {
+    Gestor() throws RemoteException {
         this.contas = new ArrayList<Conta>();
     }
 

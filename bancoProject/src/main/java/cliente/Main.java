@@ -25,8 +25,9 @@ import servidor.GestorWebService;
         public static void main(String[] args) throws Exception {
             URL url = new URL("http://localhost:8080/gestor?wsdl");
             QName qname = new QName("http://servidor/", "GestorWebServiceService");
+            QName qnamedois = new QName("http://servidor/", "GestorWebServicePort");
             Service service = Service.create(url, qname);
-            GestorWebServiceInterface gerente = service.getPort(GestorWebServiceInterface.class);
+            GestorWebServiceInterface gerente = service.getPort(qnamedois, GestorWebServiceInterface.class);
 
             
             Scanner sc = new Scanner(System.in);
