@@ -17,7 +17,7 @@ import interfaces.MensageiroInterface;
 
 /**
  *
- * @author User
+ * @author Anderson
  */
 public class Main {
     /**
